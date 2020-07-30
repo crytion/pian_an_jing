@@ -4,13 +4,10 @@
 // 遍历整个中文字符串码的10进制范围
 // 转为16进制字符串,再转成中文
 
-
 var fs = require('fs');
-
 var str = "";
 //所有中文的合集
 var arrChinese = [];
-
 // 中文的uni码范围
 for(var i = 19968; i <= 40869;i++)
 {
@@ -27,7 +24,7 @@ for(var i = 19968; i <= 40869;i++)
 	}
 }
 
-// 两字词语, 随便写写
+// 两字词语, 随便写写, 反正随机生成的
 str += "\n";
 for(let i = 0; i < 30000; i++)
 {
@@ -41,7 +38,7 @@ for(let i = 0; i < 30000; i++)
 	}
 }
 
-// 三字词语, 随便写写
+// 三字词语, 随便写写, 反正随机生成的
 str += "\n";
 for(let i = 0; i < 40000; i++)
 {
@@ -56,8 +53,6 @@ for(let i = 0; i < 40000; i++)
 	}
 }
 
-
-
 fs.writeFile('./AI_平安经.txt', str, function(err) {
     if (err) {
         throw err;
@@ -65,7 +60,6 @@ fs.writeFile('./AI_平安经.txt', str, function(err) {
 
     console.log('Saved.');
 });
-
 
 // 16进制码转成中文
 function toChinese(str)
